@@ -1,8 +1,14 @@
 import React from 'react';
 import './Button.css';
 
-const Button = (props) => 
+class Button extends React.Component {
 
-	<div>{props.children}</div>;
+  render() {
+  	return (
+  	  <div>placeholder</div>	
+
+  	);
+  }		
+}
 
 export default Button;
