@@ -1,8 +1,18 @@
 import React, { Component } from 'react';
 import Button from 'components/Button';
+import Equals from 'components/Equals';
 import './App.css';
 
 class App extends Component {
+  
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentNum: 0
+    }
+  }
+
+
   render() {
     return (
       <div className="app">
