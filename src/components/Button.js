@@ -3,10 +3,13 @@ import './Button.css';
 
 class Button extends Component {
 
+  runHandleClick = () => (
+  	this.props.handleClick(this.props.name)
+  )
+
   render() {
   	return (
-  	  /*all we have to do here is return a html button object with its name*/
-  	  <button id={this.props.id} className="button">{this.props.name}</button>
+  	  <button onClick={this.runHandleClick}>{this.props.name}</button>
   	);
   }		
 }

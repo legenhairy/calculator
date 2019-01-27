@@ -1,0 +1,20 @@
+/*setting up the layout of the buttons and display*/
+#cal-grid {
+  height: 80vw;
+  width: 80vw;
+  display: grid;	
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; /*calculator is 5 rows tall*/
+  grid-template-columns: 1fr 1fr 1fr 1fr; /*4 rows wide*/
+}
+
+
+
+
+#display {
+  width: 100%;	
+  border: 2px solid black;
+  display: flex;
+  justify-content: flex-end; /*this way, number appears towards end of container*/
+  align-items: center; /*we want calculator to be center of page*/
+  font-size: 50px;
+}

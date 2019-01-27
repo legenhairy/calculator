@@ -13,23 +13,28 @@ class App extends Component {
     }
   }
 
-
   render() {
     return (
       <div className="app">
-        <Display currentNum={this.state.currentNum} /> 
-
         <div id="cal-grid">
-          <Button id = "zero" name="0" />
-          <Button id = "one" name="1" />
-          <Button id = "two" name="2" />
-          <Button id = "three" name="3" />
-          <Button id = "four" name="4" />
-          <Button id = "five" name="5" />
-          <Button id = "six" name="6" />
-          <Button id = "seven" name="7" />
-          <Button id = "eight" name="8"/>
-          <Button id = "nine" name="9" />
+          <Display currentNum={this.state.currentNum} /> 
+          <Button id="zero" name="0" handleClick={this.handleClick} />
+          <Button id="one" name="1" handleClick={this.handleClick} />
+          <Button id="two" name="2" handleClick={this.handleClick} />
+          <Button id="three" name="3" handleClick={this.handleClick} />
+          <Button id="four" name="4" handleClick={this.handleClick} />
+          <Button id="five" name="5" handleClick={this.handleClick} />
+          <Button id="six" name="6" handleClick={this.handleClick} />
+          <Button id="seven" name="7" handleClick={this.handleClick} />
+          <Button id="eight" name="8" handleClick={this.handleClick} />
+          <Button id="nine" name="9" handleClick={this.handleClick} />
+          <Button id="clear" name="C" handleClick={this.handleClick} />
+          <Button id="equals" name="=" handleClick={this.handleClick} />
+          <Button id="decimal" name="." handleClick={this.handleClick} />
+          <Button id="add" name="+" handleClick={this.handleClick} />
+          <Button id="subtract" name="-" handleClick={this.handleClick} />
+          <Button id="multiply" name="*" handleClick={this.handleClick} />
+          <Button id="divide" name="/" handleClick={this.handleClick} />
         </div>
       </div>
     );
