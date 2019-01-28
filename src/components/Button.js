@@ -3,13 +3,11 @@ import './Button.css';
 
 class Button extends Component {
 
-  runHandleClick = () => (
-  	this.props.handleClick(this.props.name)
-  )
+  /*passing the onClick function as a prop. a pass through for button click event*/	
 
   render() {
   	return (
-  	  <button onClick={this.runHandleClick}>{this.props.name}</button>
+  	  <button onClick={this.props.handleClick}>{this.props.name}</button>
   	);
   }		
 }
