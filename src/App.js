@@ -9,12 +9,13 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentNum: "0"
+      currentNum: ""
     }
   }
 
   handleClick = (event) => {
-
+    console.log(event.target.value);
+    this.setState({ currentNum: this.state.currentNum });  
   }
 
 
@@ -34,13 +35,13 @@ class App extends Component {
           <Button id="seven" name="7" handleClick={this.handleClick} />
           <Button id="eight" name="8" handleClick={this.handleClick} />
           <Button id="nine" name="9" handleClick={this.handleClick} />
-          <Button id="clear" name="C" handleClick={this.handleClick} />
+          <Button id="clear" name="Clear" handleClick={this.handleClick} />
           <Button id="equals" name="=" handleClick={this.handleClick} />
-          <Button id="decimal" name="." handleClick={this.handleClick} />
+          <Button id="divide" name="/" handleClick={this.handleClick} />
           <Button id="add" name="+" handleClick={this.handleClick} />
           <Button id="subtract" name="-" handleClick={this.handleClick} />
           <Button id="multiply" name="*" handleClick={this.handleClick} />
-          <Button id="divide" name="/" handleClick={this.handleClick} />
+          <Button id="decimal" name="." handleClick={this.handleClick} />
         </div>
       </div>
     );
