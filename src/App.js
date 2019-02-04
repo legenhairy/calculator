@@ -18,7 +18,9 @@ class App extends Component {
     this.setState({ currentNum: this.state.currentNum });  
   }
 
-
+  clearButton = () => {
+    
+  }
 
   render() {
     return (
