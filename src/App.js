@@ -9,13 +9,15 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentNum: ""
+      currentNum: "", 
+      total: null
     }
   }
 
-  handleClick = (event) => {
+  /*pass in the buttonname prop to figure out specific use case*/
+  handleClick = (buttonName, event) => {
     console.log(event.target.value);
-    this.setState({ currentNum: this.state.currentNum });  
+    this.setState({ currentNum: event.target.value });  
   }
 
   clearButton = () => {
@@ -26,7 +28,7 @@ class App extends Component {
     return (
       <div className="app">
         <div id="cal-grid">
-          <Display currentNum={this.state.currentNum} /> 
+          <Display currentNum={this.state.currentNum || "0"} /> 
           <Button id="zero" name="0" handleClick={this.handleClick} />
           <Button id="one" name="1" handleClick={this.handleClick} />
           <Button id="two" name="2" handleClick={this.handleClick} />
