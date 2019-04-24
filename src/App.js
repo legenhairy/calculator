@@ -15,20 +15,29 @@ class App extends Component {
   }
 
   /*pass in the buttonname prop to figure out specific use case*/
-  handleClick = (buttonName, event) => {
-    console.log(event.target.value);
-    this.setState({ currentNum: event.target.value });  
-  }
-
-  clearButton = () => {
-    
-  }
-
+  handleClick = (event) => {
+    let currentNum = this.state.currentNum 
+    /*check if event.target.value is a number*/
+    switch(true) {
+      case event.target.value === "0" || event.target.value === "1"
+        || event.target.value === "2" || event.target.value === "3"
+        || event.target.value === "4" || event.target.value === "5"
+        || event.target.value === "6" || event.target.value === "7"
+        || event.target.value === "8" || event.target.value === "9":
+      if(this.state.currentNum !== "0"){
+        currentNum += event.target.value
+      } else {
+        currentNum = event.target.value
+    } 
+        this.setState({currentNum})
+    }
+  }  
+  
   render() {
     return (
       <div className="app">
         <div id="cal-grid">
-          <Display currentNum={this.state.currentNum || "0"} /> 
+          <Display id= "display" currentNum={this.state.currentNum || "0"} /> 
           <Button id="zero" name="0" handleClick={this.handleClick} />
           <Button id="one" name="1" handleClick={this.handleClick} />
           <Button id="two" name="2" handleClick={this.handleClick} />
