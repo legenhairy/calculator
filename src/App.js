@@ -39,10 +39,19 @@ class App extends Component {
       if(!this.state.operator){
         currentNum += event.target.value
         operator = true
+      } else {
+        const newNumber = currentNum.slice(0,currentNum.length-1)
+        currentNum = newNumber
+        currentNum += event.target.value
       }  
+      break
+
+      case event.target.value === "Clear":
+        currentNum = "0"
+        operator = false  
+      break  
     }
     this.setState({operator})
-
     this.setState({currentNum})
   }  
   
