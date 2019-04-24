@@ -8,7 +8,7 @@ class Button extends Component {
   /*added the value attribute to the button, now i can grab the number for the click handler*/
   render() {
   	return (
-  	  <button value={this.props.name} onClick={this.props.handleClick}>{this.props.name}</button>
+  	  <button id={this.props.id} value={this.props.name} onClick={this.props.handleClick}>{this.props.name}</button>
   	);
   }		
 }
