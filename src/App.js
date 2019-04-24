@@ -10,7 +10,8 @@ class App extends Component {
     super(props);
     this.state = {
       currentNum: "", 
-      operator: false
+      operator: false,
+      decimalFlag: false
     }
   }
 
@@ -50,6 +51,13 @@ class App extends Component {
         currentNum = "0"
         operator = false  
       break  
+    
+      case event.target.value === ".":
+        if(!this.state.decimalFlag){
+          currentNum += "."
+          this.setState({decimalFlag: true})
+        }
+
     }
     this.setState({operator})
     this.setState({currentNum})
